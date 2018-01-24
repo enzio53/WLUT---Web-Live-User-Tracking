@@ -1,6 +1,8 @@
 <?php
 class wlut_core{
 
+    protected $SQLCache = [];
+
     public function __construct(){
         error_reporting(0);
 
@@ -10,7 +12,15 @@ class wlut_core{
     }
 
     public function wlut_traitement(){
-        
+
+    }
+
+    public function wlut_user_check(){
+
+    }
+
+    private function wlut_SQLCache($haystack){
+        array_push($this->SQLCache, $haystack);
     }
 }
 
